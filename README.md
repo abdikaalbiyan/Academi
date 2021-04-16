@@ -13,7 +13,9 @@ On terminal, type:
 - ```source venv_academi/bin/activate``` *(Activated python virtual env)*
 
 
-pip3 freeze > requirements.txt
 ### Install Requirements
 - sqlite *https://www.servermania.com/kb/articles/install-sqlite/*
+- `sqlite3 academi.db`
 - `pip install -r requirements.txt`
+- run luigi: ```luigid```
+- run ETL Job: ```PYTHONPATH='.' luigi --module luigi_worker runAllTask```
