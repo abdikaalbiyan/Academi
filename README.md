@@ -15,7 +15,13 @@ On terminal, type:
 
 ### Install Requirements
 - sqlite *https://www.servermania.com/kb/articles/install-sqlite/*
-- `sqlite3 academi.db`
 - `pip install -r requirements.txt`
+
+### Run Project
+- open terminal with active virtualenv
 - run luigi: ```luigid```
+- open new terminal with active virtualenv
+- execute ```python db_config.py```
 - run ETL Job: ```PYTHONPATH='.' luigi --module luigi_worker runAllTask```
+- To check the status, open web browser and type `http://localhost:8082`
+- To check that ETL job was completed load to DB, run `sqlite3 academi.db` and then `.tables`
